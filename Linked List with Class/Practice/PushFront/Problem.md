@@ -12,7 +12,7 @@ Finish ```void List::pushFront(int _data)```
 
 ## Input
 
-輸入一個整數 ```N``` 
+輸入一個整數 ```N >= 0``` 
 <br>
 接下來輸入 ```N``` 個數，pushFront 到 Linked List
 
