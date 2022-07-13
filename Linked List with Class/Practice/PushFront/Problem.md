@@ -7,7 +7,7 @@ Finish ```void List::pushFront(int _data)```
 ## Code Description
 1. class Node
 2. class List (Linked List):
-  * private member: ```Node *head```
+  * public member: ```Node *head```
   * public function ```void pushFront(int)``` ```void print()```
 
 ## Input
