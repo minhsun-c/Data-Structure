@@ -2,32 +2,24 @@
 
 class Node
 {
-private:
+public:
     int data;
     Node *next;
-public:
+    
     /* constructor */
         Node ();
         Node (int);
         Node (Node &);
     /* end constructor */
-
-    /* member access function */
-        int getData();
-        void setData(int);
-        Node *getNext();
-        void setNext(Node *);
-    /* end member access function */
 };
 
 class List
 {
-private:
-    Node *head;
 public:
+    Node *head;
+    
     List();
-    Node *getHead();
-    void setHead(Node *);
+    
     void pushFront(int);
     void print();
 };
@@ -66,23 +58,16 @@ Node::Node (Node &node)
     this -> data = node.data;
     this -> next = node.next;
 }
-int Node::getData() { return this -> data; }
-void Node::setData(int _data) { this -> data = _data; }
-Node *Node::getNext() { return this -> next; }
-void Node::setNext(Node *_next) { this -> next = _next; }
 
 List::List() { this -> head = NULL; }
-
-Node *List::getHead() { return this -> head; }
-void List::setHead(Node *_head) { this -> head = _head; }
 
 void List::print()
 {
     Node *cur = this -> head;
     while (cur != NULL)
     {
-        std::cout << cur -> getData() << " -> ";
-        cur = cur -> getNext();
+        std::cout << cur -> data << " -> ";
+        cur = cur -> next;
     }
     std::cout << "NULL" << std::endl;
 }
