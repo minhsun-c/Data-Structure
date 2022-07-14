@@ -24,14 +24,6 @@ public:
     void print();
 };
 
-void List::pushFront(int _data)
-{
-    Node *tmp = this -> head;
-    Node *newNode = new Node(_data);
-    this -> head = newNode;
-    newNode -> next = tmp;
-}
-
 void List::print()
 {
     // Finish this function
@@ -69,3 +61,10 @@ Node::Node (Node &node)
 
 List::List() { this -> head = NULL; }
 
+void List::pushFront(int _data)
+{
+    Node *tmp = this -> head;
+    Node *newNode = new Node(_data);
+    this -> head = newNode;
+    newNode -> next = tmp;
+}
