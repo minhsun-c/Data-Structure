@@ -1,11 +1,12 @@
 #include <iostream>
+#include <vector>
 
 class Node
 {
 public:
     int data;
     Node *next;
-    
+
     /* constructor */
         Node ();
         Node (int);
@@ -17,9 +18,9 @@ class List
 {
 public:
     Node *head;
-    
+
     List();
-    
+
     void pushFront(int);
     void print();
     int popFront();
@@ -38,6 +39,7 @@ int List::popFront()
 int main()
 {
     List *list = new List;
+    std::vector <int> v;
     int len;
     std::cin >> len;
     for (int i=0; i<len; i++)
@@ -46,11 +48,17 @@ int main()
         std::cin >> input;
         list -> pushFront(input);
     }
-    while (list -> head != NULL)
+    while (true)
     {
         list -> print();
-        list -> popFront();
+        int r = list -> popFront();
+        v.push_back(r);
+        if (r == -1)
+            break;
     }
+    for (int i: v)
+        std::cout << i << " ";
+    std::cout << std::endl;
 }
 
 Node::Node ()
