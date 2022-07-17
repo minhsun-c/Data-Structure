@@ -2,7 +2,7 @@
 
 ## Description
 
-Finish ```void List::print()``` ```int List::popFront()``` 
+Finish ```void pushFront(int)``` ```void List::print()``` ```int List::popFront()``` 
 
 ## Code Description
 1. class Node
